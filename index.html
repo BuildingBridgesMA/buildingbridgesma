@@ -327,6 +327,7 @@ fieldset{border:0;padding:0;margin:0;min-width:0}
 
 /* donate */
 .goal{display:grid;gap:20px}
+#give-online .btn{max-width:100%;white-space:normal;text-align:center}
 .gfm-box{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-height:120px;display:grid;place-items:center}
 .gfm-box iframe{display:block;width:100%;border:0}
 .goal .amt{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
@@ -1790,7 +1791,7 @@ $$('[data-site]').forEach(el => {
   else if (k === 'instagram') el.innerHTML = `<a href="${esc(v)}" target="_blank" rel="noopener">@${esc(v.replace(/^https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/.*$/, ''))}</a>`;
 });
 if (SITE.signupFormUrl) { const p = $('#ext-signup'); p.hidden = false; p.innerHTML = `Prefer Google Forms? <a href="${esc(SITE.signupFormUrl)}" target="_blank" rel="noopener">Sign up there instead</a>.`; }
-if (SITE.donateUrl) $('#give-online').innerHTML = `<a class="btn gold sm" href="${esc(SITE.donateUrl)}" target="_blank" rel="noopener">Donate to our fundraiser ${ic('ext')}</a>`;
+if (SITE.donateUrl) $('#give-online').innerHTML = `<a class="btn gold sm" href="${esc(SITE.donateUrl)}" target="_blank" rel="noopener">Donate now ${ic('ext')}</a>`;
 $$('[data-fund]').forEach(a => { if (SITE.donateUrl) a.href = SITE.donateUrl; else a.hidden = true; });
 /* live fundraiser widget (same thing the official embed script builds) */
 if (SITE.donateWidget) {
